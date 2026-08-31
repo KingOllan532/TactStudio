@@ -7,9 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Kode+Mono:wght@600&family=Roboto:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Kode+Mono:wght@600&family=Roboto:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="overflow-x-hidden">
     <!-- Navigation Bar -->
     <nav class="w-[750px] h-[81px] mt-[42px] mx-auto px-8 bg-[#BDBDBD]/[0.06] backdrop-blur-[3px] rounded-2xl border border-[#BDBDBD]/32 flex items-center justify-between">
         <a href="#" class="flex items-center gap-0">
@@ -36,57 +36,61 @@
             <img src="vector.svg" alt="" class="w-[15px] h-[11px] object-contain" />
         </a>
     </nav>
-    <!-- Hero Header -->
-    <h1 class="mt-[63px] text-center text-[64px] leading-[76px] font-semibold font-['SF_Pro_Display',-'apple-system',BlinkMacSystemFont,sans-serif] text-black/80 tracking-tight">
-        Made to matter
-    </h1>
-    <p class="mt-[12px] mx-auto text-center text-[16px] leading-[25px] font-light font-['Inter'] text-black/50">
-        We create software for
-    </p>
-    <p class="mx-auto text-center text-[16px] leading-[25px] font-light font-['Inter'] text-black/50">
-        the <span class="text-[#40CFE2]">spaces</span> others leave behind.
-    </p>
-    <!-- Main Illustration Frame -->
-    <div class="relative w-[726px] h-[716px] mx-auto -mt-[8px] overflow-hidden">
-        <img src="hand.svg" alt="Hand holding phone" class="absolute left-0 top-0 w-[726px] h-[716px] object-contain z-10 pointer-events-none" />
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <!-- Hero Header -->
+        <h1 class="mt-[63px] text-center text-[64px] leading-[76px] font-semibold font-['SF_Pro_Display',-'apple-system',BlinkMacSystemFont,sans-serif] text-black/80 tracking-tight">
+            Made to matter
+        </h1>
+        <p class="mt-[12px] mx-auto text-center text-[16px] leading-[25px] font-light font-['Inter'] text-black/50">
+            We create software for
+        </p>
+        <p class="mx-auto text-center text-[16px] leading-[25px] font-light font-['Inter'] text-black/50">
+            the <span class="text-[#40CFE2]">spaces</span> others leave behind.
+        </p>
+        <!-- Main Illustration Frame -->
+        <div class="relative w-[726px] h-[716px] mx-auto -mt-[8px] overflow-hidden">
+            <img src="hand.svg" alt="Hand holding phone" class="absolute left-0 top-[5px] w-[726px] h-[716px] object-contain z-10 pointer-events-none" />
 
-        <!-- Grey Background Vector -->
-        <div class="absolute left-[180.11px] top-[87.57px] w-[327.01px] h-[647.72px] rounded-[40px] overflow-hidden z-20">
-            <img src="grey.svg" class="w-full h-full object-cover"  />
-        </div>
+            <!-- Grey Background Vector -->
+            <div class="absolute left-[180.11px] top-[87.57px] w-[327.01px] h-[647.72px] rounded-[40px] overflow-hidden z-20">
+                <img src="grey.svg" class="w-full h-full object-cover"  />
+            </div>
 
-        <!-- Phone Vector -->
-        <img src="phone.svg" alt="Phone frame" class="absolute left-[167.63px] top-[67.78px] w-[351.65px] h-[665.48px] object-contain z-30 pointer-events-none" />
+            <!-- Phone Vector -->
+            <img src="phone.svg" alt="Phone frame" class="absolute left-[167.63px] top-[67.78px] w-[351.65px] h-[665.48px] object-contain z-30 pointer-events-none" />
 
-        <!-- White Background Vector -->
-        <div class="absolute left-[199.83px] top-[163.98px] w-[285.96px] h-[543.47px] rounded-2xl overflow-hidden z-40 p-3 flex flex-col gap-3">
-            <img src="white.svg" alt="" class="absolute inset-0 w-full h-full object-cover -z-10" />
+            <!-- White Background Vector -->
+            <div class="absolute left-[199.83px] top-[163.98px] w-[285.96px] h-[543.47px] rounded-2xl overflow-hidden z-40 p-3 flex flex-col gap-3">
+                <img src="white.svg" alt="" class="absolute inset-0 w-full h-full object-cover -z-10" />
 
-            <!-- Header Content layered inside White Background -->
-            <div class="flex items-center gap-3 relative z-10">
-                <div class="w-[71.49px] h-[75.17px] bg-black rounded-xl flex items-center justify-center shrink-0">
-                    <img src="tactstudioslogo 2.svg" alt="Logo" class="w-[46.84px] h-[30.81px] object-contain" />
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-[12px] font-medium text-slate-500 font-['Inter']">
-                    Made to matter
-                    </span>
-                    <span class="text-[14px] font-bold text-slate-900 leading-tight font-['Inter']">
-                    Your product has been shipped
-                    </span>
+                <!-- Header Content layered inside White Background -->
+                <div class="flex items-center gap-3 relative z-10">
+                    <div class="w-[71.49px] h-[75.17px] bg-black rounded-xl flex items-center justify-center shrink-0">
+                        <img src="tactstudioslogo 2.svg" alt="Logo" class="w-[46.84px] h-[30.81px] object-contain" />
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[12px] font-medium text-slate-500 font-['Inter']">
+                        Made to matter
+                        </span>
+                        <span class="text-[14px] font-bold text-slate-900 leading-tight font-['Inter']">
+                        Your product has been shipped
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-            <!-- Black Background Vector -->
-            <img src="black.svg" alt="" class="absolute left-[214.62px] top-[273.66px] z-50 pointer-events-none" />
+                <!-- Black Background Vector -->
+                <img src="black.svg" alt="" class="absolute left-[214.62px] top-[273.66px] z-50 pointer-events-none" />
 
-        <!-- Video Recording Container -->
-        <div class="absolute left-[265.16px] top-[315.56px] z-60 overflow-hidden">
-            <video autoplay loop muted playsinline class="object-cover">
-                <source src="your-recording.mp4" type="video/mp4" />
-            </video>
+            <!-- Video Recording Container -->
+            <div class="absolute left-[265.16px] top-[315.56px] z-60 overflow-hidden">
+                <video autoplay loop muted playsinline class="object-cover">
+                    <source src="your-recording.mp4" type="video/mp4" />
+                </video>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>
