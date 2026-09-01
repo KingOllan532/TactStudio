@@ -48,10 +48,7 @@
             </a>
         </nav>
 
-        <!-- Fullscreen Mobile Menu View (moved OUTSIDE <nav> so `fixed` is relative to the viewport, not the blurred nav) -->
-        <div id="menu" class="hidden fixed inset-0 w-screen h-screen h-[100dvh] bg-white z-[100] flex-col justify-between items-start px-6 pt-6 pb-[34px] md:!hidden overflow-hidden">
-
-            <!-- Top Container -->
+        <div id="menu" class="hidden fixed inset-0 w-screen h-[100dvh] bg-white z-[100] flex-col justify-between items-start px-6 pt-6 pb-[max(env(safe-area-inset-bottom),16px)] md:!hidden overflow-hidden">
             <div class="w-full flex flex-col items-start shrink-0">
                 <!-- Close Button -->
                 <div class="w-full flex justify-end">
@@ -71,7 +68,7 @@
             </div>
 
             <!-- Bottom CTA Button -->
-            <div class="w-full flex justify-start shrink-0 pb-[34px]">
+            <div class="w-full flex justify-start shrink-0">
                 <a href="#contact" class="menu-link flex items-center justify-center gap-2 h-[clamp(52px,8vh,66px)] w-full max-w-[370px] bg-black text-white text-[16px] font-semibold font-['Roboto'] rounded-2xl transition-all">
                     <span>Start a project</span>
                     <img src="vector.svg" alt="" class="w-[16px] h-[12px] object-contain" />
@@ -132,7 +129,7 @@
                     <!-- Video Recording Container -->
                     <div class="absolute left-[265.16px] top-[315.56px] z-60 overflow-hidden">
                         <video autoplay loop muted playsinline class="object-cover">
-                            <source src="your-recording.mp4" type="video/mp4" />
+                            <source src="Allegiance.2024.S01E01.(NKIRI.COM).mkv" type="video/mp4" />
                         </video>
                     </div>
                 </div>
