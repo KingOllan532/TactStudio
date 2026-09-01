@@ -10,87 +10,161 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Kode+Mono:wght@600&family=Roboto:wght@600&display=swap" rel="stylesheet">
 </head>
 <body class="overflow-x-hidden">
-    <!-- Navigation Bar -->
-    <nav class="w-[750px] h-[81px] mt-[42px] mx-auto px-8 bg-[#BDBDBD]/[0.06] backdrop-blur-[3px] rounded-2xl border border-[#BDBDBD]/32 flex items-center justify-between">
-        <a href="#" class="flex items-center gap-0">
-            <img src="tactstudioslogo 2.svg" alt="Tactstudios Logo" class="h-[21px] w-[15px] object-contain" />
-            <span class="text-[16px] font-semibold tracking-tight font-['Kode_Mono'] bg-gradient-to-r from-[#000000] from-[89%] via-[#037D99] via-[100%] to-[#73A2FC] to-[100%] bg-clip-text text-transparent">
-                Tactstudios
-            </span>
-        </a>
 
-        <div class="flex items-center gap-8 text-[16px] font-semibold font-['Inter']">
-            <a href="#services" class="text-[#3C3C43] opacity-100 transition-opacity" aria-current="page">
+    <div class="w-full max-w-[430px] md:max-w-none mx-auto min-h-screen overfllow-x-hidden">
+        <!-- Navigation Bar -->
+        <nav class="w-[90%] max-w-[750px] h-[81px] mt-[42px] mx-auto px-6 md:px-8 bg-[#BDBDBD]/[0.06] backdrop-blur-[3px] rounded-2xl border border-[#BDBDBD]/32 flex items-center justify-between relative z-50">
+        
+            <!-- Left Side: Logo -->
+            <a href="#" class="flex items-center gap-0 shrink-0">
+                <img src="tactstudioslogo 2.svg" alt="Tactstudios Logo" class="h-[21px] w-[15px] object-contain" />
+                <span class="text-[16px] font-semibold tracking-tight font-['Kode_Mono'] bg-gradient-to-r from-[#000000] from-[89%] via-[#037D99] via-[100%] to-[#73A2FC] to-[100%] bg-clip-text text-transparent">
+                    Tactstudios
+                </span>
+            </a>
+
+            <!-- Mobile Hamburger Button (Visible only on screens smaller than md) -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 text-[#3C3C43] focus:outline-none">
+                <img src="menu.svg" alt="" class="w-[52px] h-[40px] object-contain" />
+            </button>
+
+            <!-- Desktop Center: Nav Links -->
+            <div class="hidden md:flex items-center gap-8 text-[16px] font-semibold font-['Inter']">
+                <a href="#services" class="text-[#3C3C43] opacity-100 transition-opacity" aria-current="page">
                 Services
-            </a>
-            <a href="#products" class="text-[#3C3C43] opacity-60 hover:opacity-100 transition-opacity">
+                </a>
+                <a href="#products" class="text-[#3C3C43] opacity-60 hover:opacity-100 transition-opacity">
                 Products
-            </a>
-            <a href="#pricing" class="text-[#3C3C43] opacity-60 hover:opacity-100 transition-opacity">
+                </a>
+                <a href="#pricing" class="text-[#3C3C43] opacity-60 hover:opacity-100 transition-opacity">
                 Pricing
-            </a>
-        </div>
-
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 h-[40px] px-[16px] py-[12px] bg-[#111313] hover:bg-black text-white text-[14px] font-semibold font-['Roboto'] rounded-[7.5px] transition-all duration-200">
-            <span>Start a project</span>
-            <img src="vector.svg" alt="" class="w-[15px] h-[11px] object-contain" />
-        </a>
-    </nav>
-    
-    <!-- Hero Section -->
-    <section id="hero">
-        <!-- Hero Header -->
-        <h1 class="mt-[63px] text-center text-[64px] leading-[76px] font-semibold font-['SF_Pro_Display',-'apple-system',BlinkMacSystemFont,sans-serif] text-black/80 tracking-tight">
-            Made to matter
-        </h1>
-        <p class="mt-[12px] mx-auto text-center text-[16px] leading-[25px] font-light font-['Inter'] text-black/50">
-            We create software for
-        </p>
-        <p class="mx-auto text-center text-[16px] leading-[25px] font-light font-['Inter'] text-black/50">
-            the <span class="text-[#40CFE2]">spaces</span> others leave behind.
-        </p>
-        <!-- Main Illustration Frame -->
-        <div class="relative w-[726px] h-[716px] mx-auto -mt-[8px] overflow-hidden">
-            <img src="hand.svg" alt="Hand holding phone" class="absolute left-0 top-[5px] w-[726px] h-[716px] object-contain z-10 pointer-events-none" />
-
-            <!-- Grey Background Vector -->
-            <div class="absolute left-[180.11px] top-[87.57px] w-[327.01px] h-[647.72px] rounded-[40px] overflow-hidden z-20">
-                <img src="grey.svg" class="w-full h-full object-cover"  />
+                </a>
             </div>
 
-            <!-- Phone Vector -->
-            <img src="phone.svg" alt="Phone frame" class="absolute left-[167.63px] top-[67.78px] w-[351.65px] h-[665.48px] object-contain z-30 pointer-events-none" />
+            <!-- Desktop Right: CTA Button -->
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center gap-2 h-[40px] px-[16px] py-[12px] bg-[#111313] hover:bg-black text-white text-[14px] font-semibold font-['Roboto'] rounded-[7.5px] transition-all duration-200 shrink-0">
+                <span>Start a project</span>
+                <img src="vector.svg" alt="" class="w-[15px] h-[11px] object-contain" />
+            </a>
 
-            <!-- White Background Vector -->
-            <div class="absolute left-[199.83px] top-[163.98px] w-[285.96px] h-[543.47px] rounded-2xl overflow-hidden z-40 p-3 flex flex-col gap-3">
-                <img src="white.svg" alt="" class="absolute inset-0 w-full h-full object-cover -z-10" />
-
-                <!-- Header Content layered inside White Background -->
-                <div class="flex items-center gap-3 relative z-10">
-                    <div class="w-[71.49px] h-[75.17px] bg-black rounded-xl flex items-center justify-center shrink-0">
-                        <img src="tactstudioslogo 2.svg" alt="Logo" class="w-[46.84px] h-[30.81px] object-contain" />
+            <!-- Fullscreen Mobile Menu View -->
+            <div id="menu" class="hidden fixed inset-0 w-full h-screen h-[100dvh] bg-white z-50 flex-col justify-between items-start px-6 pt-6 pb-[34px] md:!hidden overflow-hidden">
+                
+                <!-- Top Container -->
+                <div class="w-full flex flex-col items-start shrink-0">
+                    <!-- Close Button -->
+                    <div class="w-full flex justify-end">
+                        <button id="close-btn" aria-label="Close Menu" class="text-black p-2 focus:outline-none cursor-pointer">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-[12px] font-medium text-slate-500 font-['Inter']">
-                        Made to matter
-                        </span>
-                        <span class="text-[14px] font-bold text-slate-900 leading-tight font-['Inter']">
-                        Your product has been shipped
-                        </span>
+
+                    <!-- Navigation Links -->
+                    <div class="w-full flex flex-col items-start gap-[24px] pt-[2vh]">
+                        <a href="#services" class="menu-link text-[#1a1a1a] text-[clamp(38px,12vw,64px)] font-semibold leading-none font-['-apple-system','SF_Pro_Display',BlinkMacSystemFont,sans-serif] tracking-tight">Services</a>
+                        <a href="#products" class="menu-link text-[#1a1a1a] text-[clamp(38px,12vw,64px)] font-semibold leading-none font-['-apple-system','SF_Pro_Display',BlinkMacSystemFont,sans-serif] tracking-tight">Products</a>
+                        <a href="#pricing" class="menu-link text-[#1a1a1a] text-[clamp(38px,12vw,64px)] font-semibold leading-none font-['-apple-system','SF_Pro_Display',BlinkMacSystemFont,sans-serif] tracking-tight">Pricing</a>
+                    </div>
+                </div>
+
+                <!-- Bottom CTA Button -->
+                <div class="w-full flex justify-start shrink-0 pb-[34px]">
+                    <a href="#contact" class="menu-link flex items-center justify-center gap-2 h-[clamp(52px,8vh,66px)] w-full max-w-[370px] bg-black text-white text-[16px] font-semibold font-['Roboto'] rounded-2xl transition-all">
+                        <span>Start a project</span>
+                        <img src="vector.svg" alt="" class="w-[16px] h-[12px] object-contain" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="overflow-hidden">
+            <!-- Hero Header -->
+            <h1 class="mt-[40px] md:mt-[63px] text-center text-[40px] leading-[48px] md:text-[64px] md:leading-[76px] font-semibold font-['SF_Pro_Display',-'apple-system',BlinkMacSystemFont,sans-serif] text-black/80 tracking-tight px-4">
+                Made to matter
+            </h1>
+            <p class="mt-[12px] mx-auto text-center text-[15px] md:text-[16px] leading-[22px] md:leading-[25px] font-light font-['Inter'] text-black/50 px-4">
+                We create software for
+            </p>
+            <p class="mx-auto text-center text-[15px] md:text-[16px] leading-[22px] md:leading-[25px] font-light font-['Inter'] text-black/50 px-4">
+                the <span class="text-[#40CFE2]">spaces</span> others leave behind.
+            </p>
+
+            <!-- Responsive Illustration Container -->
+            <div class="w-full flex justify-center overflow-hidden -mt-[8px]">
+                <!-- Scaled to 0.7 for Mobile -->
+                <div class="relative w-[726px] h-[716px] shrink-0 scale-[0.7] sm:scale-[0.8] md:scale-100 origin-top -mb-[215px] sm:-mb-[120px] md:mb-0">
+                    <img src="hand.svg" alt="Hand holding phone" class="absolute left-0 top-[5px] w-[726px] h-[716px] object-contain z-10 pointer-events-none" />
+
+                    <!-- Grey Background Vector -->
+                    <div class="absolute left-[180.11px] top-[87.57px] w-[327.01px] h-[647.72px] rounded-[40px] overflow-hidden z-20">
+                        <img src="grey.svg" class="w-full h-full object-cover" />
+                    </div>
+
+                    <!-- Phone Vector -->
+                    <img src="phone.svg" alt="Phone frame" class="absolute left-[167.63px] top-[67.78px] w-[351.65px] h-[665.48px] object-contain z-30 pointer-events-none" />
+
+                    <!-- White Background Vector -->
+                    <div class="absolute left-[199.83px] top-[163.98px] w-[285.96px] h-[543.47px] rounded-2xl overflow-hidden z-40 p-3 flex flex-col gap-3">
+                        <img src="white.svg" alt="" class="absolute inset-0 w-full h-full object-cover -z-10" />
+
+                        <!-- Header Content layered inside White Background -->
+                        <div class="flex items-center gap-3 relative z-10">
+                            <div class="w-[71.49px] h-[75.17px] bg-black rounded-xl flex items-center justify-center shrink-0">
+                                <img src="tactstudioslogo 2.svg" alt="Logo" class="w-[46.84px] h-[30.81px] object-contain" />
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[12px] font-medium text-slate-500 font-['Inter']">
+                                    Made to matter
+                                </span>
+                                <span class="text-[14px] font-bold text-slate-900 leading-tight font-['Inter']">
+                                    Your product has been shipped
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Black Background Vector -->
+                    <img src="black.svg" alt="" class="absolute left-[214.62px] top-[273.66px] z-50 pointer-events-none" />
+
+                    <!-- Video Recording Container -->
+                    <div class="absolute left-[265.16px] top-[315.56px] z-60 overflow-hidden">
+                        <video autoplay loop muted playsinline class="object-cover">
+                            <source src="your-recording.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
+        </section>
+    </div>
 
-                <!-- Black Background Vector -->
-                <img src="black.svg" alt="" class="absolute left-[214.62px] top-[273.66px] z-50 pointer-events-none" />
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const menu = document.getElementById('menu');
+            const menuLinks = document.querySelectorAll('.menu-link');
 
-            <!-- Video Recording Container -->
-            <div class="absolute left-[265.16px] top-[315.56px] z-60 overflow-hidden">
-                <video autoplay loop muted playsinline class="object-cover">
-                    <source src="your-recording.mp4" type="video/mp4" />
-                </video>
-            </div>
-        </div>
-    </section>
+            function toggleMenu() {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+                document.body.classList.toggle('overflow-hidden');
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+            if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+
+            // Close overlay when clicking any mobile link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!menu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
