@@ -8,9 +8,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Kode+Mono:wght@600&family=Roboto:wght@600&display=swap" rel="stylesheet">
+    <style>
+        @media (min-width: 900px) {
+            .frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1440 / 1024;
+            container-type: inline-size;
+            overflow: hidden;
+            }
+            .frame-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1440px;
+            height: 1024px;
+            transform-origin: top left;
+            transform: scale(calc(100cqw / 1440));
+            }
+        }
+    </style>
 </head>
 <body class="overflow-x-hidden">
-
     <div class="w-full max-w-[430px] md:max-w-none mx-auto min-h-screen overflow-x-hidden">
         <!-- Navigation Bar -->
         <nav class="w-[90%] max-w-[750px] h-[81px] mt-[20px] md:mt-[42px] mx-auto px-6 md:px-8 bg-[#BDBDBD]/[0.06] backdrop-blur-[3px] rounded-2xl border border-[#BDBDBD]/32 flex items-center justify-between relative z-50">
@@ -127,10 +146,130 @@
                     <img src="black.svg" alt="" class="absolute left-[214.62px] top-[273.66px] z-50 pointer-events-none" />
 
                     <!-- Video Recording Container -->
-                    <div class="absolute left-[265.16px] top-[315.56px] z-60 overflow-hidden">
-                        <video autoplay loop muted playsinline class="object-cover">
+                    <div class="absolute left-[265.16px] top-[315.56px] w-[155.31px] h-[336.43px] rounded-[20px] z-[60] overflow-hidden">
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover">
                             <source src="Allegiance.2024.S01E01.(NKIRI.COM).mkv" type="video/mp4" />
                         </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Featured Works -->
+        <section id="section-2" class="w-full bg-[#0D0D0D] text-white pt-[33px] max-h-[900px] overflow-hidden">
+            <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+                
+                <!-- Header Text Block -->
+                <div class="text-center flex flex-col items-center gap-0">
+                    <h2 class="text-[24px] font-semibold text-white/80 leading-tight font-['-apple-system','SF_Pro_Display',BlinkMacSystemFont,sans-serif] tracking-tight">
+                        One team. One product.
+                    </h2>
+                    <p class="text-[24px] font-semibold text-[#BDBDBD]/40 leading-tight font-['-apple-system','SF_Pro_Display',BlinkMacSystemFont,sans-serif] tracking-tight">
+                        Designed here. Engineered here.
+                    </p>
+                </div>
+
+                <!-- Navigation Row: Featured work & See all work -->
+                <div class="mt-[88px] flex items-center justify-between max-w-[880px] mx-auto">
+                    <!-- Left: Featured work -->
+                    <span class="text-[16px] font-medium text-white/80 font-['Inter']">
+                        Featured work
+                    </span>
+
+                    <!-- Right: See all work link -->
+                    <a href="#works" class="flex items-center gap-[10px] text-[14px] font-semibold text-white font-['Roboto'] hover:opacity-80 transition-opacity">
+                        <span>See all work</span>
+                        <img src="vector.svg" alt="" class="w-[15px] h-[11px] object-contain" />
+                    </a>
+                </div>
+
+                <!-- Featured Project Card Placeholder -->
+                <div class="mt-[32px] max-w-[880px] max-h-[441px] mx-auto bg-white rounded-[24px] px-8 md:px-12 pt-[22px] pb-8 md:pb-12 text-black flex flex-col justify-between relative overflow-hidden">
+                    
+                    <!-- Card Top Header Row (Positioned at y=22px) -->
+                    <div class="w-full flex items-center justify-between">
+                        <!-- Centered Frame with First SVG Logo (84px x 34px) -->
+                        <div class="flex items-center justify-center">
+                            <img src="loggr.svg" alt="Loggr Logo" class="w-[84px] h-[34px] object-contain" />
+                        </div>
+
+                        <!-- Second SVG Logo (21px x 26px) placed 647px away -->
+                        <div class="flex items-center justify-center ml-[647px]">
+                            <img src="apple_logo.svg" alt="Apple Logo" class="w-[21px] h-[26px] object-contain" />
+                        </div>
+                    </div>
+
+                    <!-- Card Body Content -->
+                    <div class="w-full flex-1 flex flex-col md:flex-row items-start justify-between mt-[100px]">
+                        
+                        <!-- Left Side: Phone Illustration (Scaled to 0.6) -->
+                        <div class="relative w-[246px] h-[465px] shrink-0">
+                            <!-- Inner Wrapper scaled to 0.7 from top-left -->
+                            <div class="relative w-[351.65px] h-[665.48px] scale-[0.7] origin-top-left">
+                                <!-- Grey Background Vector -->
+                                <div class="absolute left-[12.48px] top-[19.79px] w-[327.01px] h-[647.72px] rounded-[40px] overflow-hidden z-10">
+                                    <img src="grey.svg" class="w-full h-full object-cover" alt="" />
+                                </div>
+
+                                <!-- Phone Frame Vector -->
+                                <img src="phone.svg" alt="Phone frame" class="absolute left-0 top-0 w-[351.65px] h-[665.48px] object-contain z-20 pointer-events-none" />
+
+                                <!-- White Background Vector -->
+                                <div class="absolute left-[32.2px] top-[96.2px] w-[285.96px] h-[543.47px] rounded-2xl overflow-hidden z-30 p-3 flex flex-col gap-3">
+                                    <img src="white.svg" alt="" class="absolute inset-0 w-full h-full object-cover -z-10" />
+
+                                    <!-- Notification Header Inside Screen -->
+                                    <div class="flex items-center gap-3 relative z-10">
+                                        <div class="w-[71.49px] h-[75.17px] bg-black rounded-xl flex items-center justify-center shrink-0">
+                                            <img src="tactstudioslogo 2.svg" alt="Logo" class="w-[46.84px] h-[30.81px] object-contain" />
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <span class="text-[12px] font-medium text-slate-500 font-['Inter']">Made to matter</span>
+                                            <span class="text-[14px] font-bold text-slate-900 leading-tight font-['Inter']">Your product has been shipped</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Black Background Vector -->
+                                <img src="black.svg" alt="" class="absolute left-[46.99px] top-[205.88px] z-40 pointer-events-none" />
+
+                                <!-- Video Recording Container -->
+                                <div class="absolute left-[97.53px] top-[247.78px] w-[155.31px] h-[336.43px] rounded-[20px] z-[50] overflow-hidden">
+                                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                                        <source src="Allegiance.2024.S01E01.(NKIRI.COM).mkv" type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side: Text & Button Content (Aligned 0px from top, 163px away from illustration) -->
+                        <div class="flex flex-col items-start ml-[163px] pt-0">
+                            <!-- Header: Scan. Track. Protect. (48px, Semibold, SF Pro) -->
+                            <h3 class="text-[48px] font-semibold text-[#1a1a1a] leading-[1.1] tracking-tight font-['-apple-system','SF_Pro_Display',BlinkMacSystemFont,sans-serif] max-w-[320px]">
+                                Scan. Track. Protect.
+                            </h3>
+
+                            <!-- See More CTA (60px below header) -->
+                            <a href="#see-more" class="mt-[60px] inline-flex items-center justify-center gap-[10px] h-[40px] px-[16px] w-[147px] bg-[#111313] hover:bg-black text-white text-[14px] font-semibold font-['Roboto'] rounded-[7.5px] transition-all">
+                                <span>See more</span>
+                                <img src="vector.svg" alt="" class="w-[15px] h-[11px] object-contain" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-[96px] w-full max-w-[880px] mx-auto flex justify-center [perspective:1000px]">
+                    <div class="w-full h-[400px] bg-white rounded-[32px] [transform:rotateX(25deg)] origin-bottom shadow-2xl blur-[2px] pt-[29px] md:px-12">
+                        <div class="w-full flex items-center justify-between">
+                            <!-- Centered Frame with First SVG Logo (84px x 34px) -->
+                            <p class="flex items-center justify-center text-black text-[20px] font-['Inter']">
+                                Project
+                            </p>
+
+                            <!-- Second SVG Logo (21px x 26px) placed 647px away -->
+                            <div class="flex items-center justify-center ml-[647px]">
+                                <img src="apple_logo.svg" alt="Apple Logo" class="w-[21px] h-[26px] object-contain" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
